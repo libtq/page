@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>行业扫描</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><img src="http://page.stdstring.com/lib/image-20191219212032807.png" referrerpolicy="no-referrer" alt="image-20191219212032807"></p><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n4"><a class="md-toc-inner" style="cursor: pointer;" href="#1-行业扫描">1 行业扫描</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" style="cursor: pointer;" href="#11-关于举办-2019-新时代图书馆建设与发展研讨会的通知"><strong>1.1</strong> 关于举办 <strong>2019</strong> 新时代图书馆建设与发展研讨会的通知</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" style="cursor: pointer;" href="#12-关于举办-2019-年全国图书馆新型服务能力建设学术研讨会的通知">1.2 关于举办 <strong>2019</strong> 年全国图书馆新型服务能力建设学术研讨会的通知</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n37"><a class="md-toc-inner" style="cursor: pointer;" href="#13-2019-年第十二届图书馆管理与服务创新论坛通知">1.3 2019 年“第十二届图书馆管理与服务创新论坛”通知</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n65"><a class="md-toc-inner" style="cursor: pointer;" href="#14-2019-年中国图书馆学会学术论文和业务案例征集研议会召开">1.4 2019 年中国图书馆学会学术论文和业务案例征集研议会召开</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n69"><a class="md-toc-inner" style="cursor: pointer;" href="#15-中国图书馆学会副理事长程焕文成功连任国际图联管理委员会委员">1.5 中国图书馆学会副理事长程焕文成功连任国际图联管理委员会委员</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n72"><a class="md-toc-inner" style="cursor: pointer;" href="#2-专题报道">2. 专题报道</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n74"><a class="md-toc-inner" style="cursor: pointer;" href="#21-文献资源采购评标要素差异性的实证研究">2.1 文献资源采购评标要素差异性的实证研究</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n79"><a class="md-toc-inner" style="cursor: pointer;" href="#22-馆际互借与读者荐购的统一关联机制研究">2.2 馆际互借与读者荐购的统一关联机制研究</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n81"><a class="md-toc-inner" style="cursor: pointer;" href="#23-文献编目从数字化到数据化">2.3 文献编目<strong>:</strong>从数字化到数据化</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n84"><a class="md-toc-inner" style="cursor: pointer;" href="#24-基于元数据管理的数字资源保障评估研究">2.4 基于元数据管理的数字资源保障评估研究</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n87"><a class="md-toc-inner" style="cursor: pointer;" href="#25-人文社会科学外译图书评价指标体系研究">2.5 人文社会科学外译图书评价指标体系研究</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n92"><a class="md-toc-inner" style="cursor: pointer;" href="#3-探索与研究">3. 探索与研究</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n93"><a class="md-toc-inner" style="cursor: pointer;" href="#31-阅读推广的研究方法述评">3.1 阅读推广的研究方法述评</a></span></p></div><h1><a name="1-行业扫描" class="md-header-anchor"></a><span>1 行业扫描</span></h1><h2><a name="11-关于举办-2019-新时代图书馆建设与发展研讨会的通知" class="md-header-anchor"></a><strong><span>1.1</span></strong><span> 关于举办 </span><strong><span>2019</span></strong><span> 新时代图书馆建设与发展研讨会的通知</span></h2><p><span>为深入学习贯彻党的十九大精神，全面落实国务院《新一代人工智能发展规划》，展现智慧图书馆 魅力，分析发展问题，研讨发展方向，“2019 新时代图书馆建设与发展研讨会”将于 6 月 13 日至 6 月 16 日在重庆图书馆举办。</span></p><p><span>以人工智能、大数据、互联网等为核心的智慧图书馆建设，成为业内人士的热点话题。会议以“科 技引领·服务创新:智慧图书馆与新型服务模式构建”为主题，研讨图书馆如何抓住新时代蕴含的新机 遇，创新理念，创新管理模式，依靠科技创新突破图书馆发展的历史瓶颈，实现图书馆更高效、更智慧、 可持续的健康发展。会议将邀请相关领域专家出席，为推进智慧图书馆发展建言献策。</span></p><p><span>会议采取网上报名，中国图书馆学会网站(</span><a href='http://www.lsc.org.cn' target='_blank' class='url'>www.lsc.org.cn</a><span>)右上角登录“会员管理与服务平台”， 在“我的首页”找到会议名称，点击“参加”提交报名申请。报名截止日期 2019 年 6 月 1 日。</span></p><p><span>来源:中国图书馆学会学术研究委员会.关于举办 2019 新时代图书馆建设与发展研讨会的通知. 2019-05-07. </span><a href='http://www.lsc.org.cn/contents/1129/13503.html' target='_blank' class='url'>http://www.lsc.org.cn/contents/1129/13503.html</a></p><h2><a name="12-关于举办-2019-年全国图书馆新型服务能力建设学术研讨会的通知" class="md-header-anchor"></a><span>1.2 关于举办 </span><strong><span>2019</span></strong><span> 年全国图书馆新型服务能力建设学术研讨会的通知</span></h2><p><span>图书馆发展正在从资源驱动走向服务主导的新时代。图书馆发展的根本问题是服务问题，而服务的 根本问题是服务能力。图书馆的服务能力需要以用户需求为牵引，从传统的以文献、馆舍和馆内服务， 向嵌入式、深度的学科服务、情报服务、数据服务、出版服务、智库服务、智能服务和智慧服务等新型 服务延伸和拓展，实现图书馆与图书馆服务的重大转型与变革，增强图书馆的服务功能与服务效果。</span></p><p><span>2019 年 7 月 31 日至 8 月 3 日，在黑龙江省齐齐哈尔市召开 2019 年全国图书馆新型服务能力建设学 术研讨会。会议将邀请国内图书馆服务领域重要专家学者与一线工作者共同探讨和研究新形势下图书馆 新型服务能力提升的理论与实践问题，总结和分享我国各级各类图书馆过去几年在新型服务方面所做的 成功探索，分析和解决当前和未来图书馆新型服务能力建设面对的新问题与新挑战。</span></p><p><span>一、组织机构</span>
+<span>主办单位:中国图书馆学会学术研究委员会 承办单位:齐齐哈尔医学院图书馆、《图书情报工作》杂志社</span></p><p><span>二、会议主题</span>
+<span>图书馆新型服务能力建设</span>
+<span>分主题:</span></p><ol start='' ><li><span>新时代图书馆的发展要求与转型趋势</span></li><li><span>学科服务的发展模式与创新变革态势</span></li><li><span>情报分析与竞争力研究与服务</span></li><li><span>科学数据管理与服务理论与实践</span></li><li><span>开放出版与图书馆出版服务</span></li><li><span>图书馆的智库能力与智库服务</span></li><li><span>智能图书馆与智慧图书馆服务</span></li><li><span>新型图书馆服务体系建设与服务评价</span></li><li><span>其他</span></li></ol><p><span>三、报名方式</span></p><p><span>会议采取网上报名，中国图书馆学会网站(</span><a href='http://www.lsc.org.cn' target='_blank' class='url'>www.lsc.org.cn</a><span>)右上角登录“会员管理与服务平台”， 在“我的首页”找到会议名称，点击“参加”提交报名申请。报名截止日期 2019 年 7 月 15 日。</span></p><p><span>来源:中国图书馆学会学术研究委员会.关于举办 2019 年全国图书馆新型服务能力建设学术研讨会的通知. 2019-03-22. </span><a href='http://www.lsc.org.cn/contents/1129/13310.html?tdsourcetag=s_pcqq_aiomsg' target='_blank' class='url'>http://www.lsc.org.cn/contents/1129/13310.html?tdsourcetag=s_pcqq_aiomsg</a></p><h2><a name="13-2019-年第十二届图书馆管理与服务创新论坛通知" class="md-header-anchor"></a><span>1.3 2019 年“第十二届图书馆管理与服务创新论坛”通知</span></h2><p><span>由教育部高等学校图书情报工作指导委员会、中国图书馆学会高等学校图书馆分会、CALIS 管理中 心、上海交通大学图书馆主办，江南大学图书馆承办的&quot;第十二届图书馆管理与服务创新论坛&quot;(CFLMS —Creative Forum for Library Management and Service)，拟于 2019 年 10 月底在江苏无锡市举办。面向全 国征集论文:</span></p><p><span>一、会议主题</span>
+<span> 智慧强内涵，服务育人才</span>
+<span> 二、分主题(包括但不限于以下方面)</span></p><ol start='' ><li><span>图书馆如何更好地为本科教育服务</span></li><li><span>图书馆服务创新与成效评价(面向学习与人才培养)</span></li><li><span>如何有效借助学科服务、情报分析服务和知识产权信息服务支撑&quot;双一流&quot;建设</span></li><li><span>以&quot;立德树人教书育人&quot;为目标建设育人服务体系</span></li><li><span>数据驱动与成效评估的学术资源建设理论与方法</span></li><li><span>十四五发展规划的需求调研与服务趋势分析</span></li><li><span>图书馆综合服务能力提升与建设</span></li></ol><p><span>三、征文要求</span></p><ol start='' ><li><span>投稿论文必须为未公开发表的原创性研究或实践成果;论文研究的问题明确具体，观点鲜明，论</span></li></ol><p><span>据充分且有实际材料(如统计数据、事实、自己或他人的调研结果、工作中积累的观察记录等)的支持， 提倡实证性研究;文章结构合理，要素齐全，文笔精炼;论文主题词、参考文献须符合出版规范，引文 须注明出处;每篇论文后请注明第一作者的姓名、单位、电话、传真、电子信箱、通讯地址及邮政编码</span></p><ol start='2' ><li><span>投稿邮箱:</span><a href='mailto:tsg@jiangnan.edu.cn' target='_blank' class='url'>tsg@jiangnan.edu.cn</a></li><li><span>论文题名及摘要提交截止日期为 2019 年 6 月 30 日，全文截止日期为 2019 年 8 月 31 日。 来源:图书馆管理与服务创新论坛. 2019 年第十二届图书馆管理与服务创新论坛通知. 2019-04-25. </span><a href='http://cflms.lib.sjtu.edu.cn/2019/notice.html' target='_blank' class='url'>http://cflms.lib.sjtu.edu.cn/2019/notice.html</a></li></ol><h2><a name="14-2019-年中国图书馆学会学术论文和业务案例征集研议会召开" class="md-header-anchor"></a><span>1.4 2019 年中国图书馆学会学术论文和业务案例征集研议会召开</span></h2><p><span>5月14日, 2019年中国图书馆学会学术论文和业务案例征集研议会在国家图书馆召开。中国图书馆 学会副理事长、国家图书馆副馆长陈樱，中国图书馆学会副理事长、学术研究委员会主任、澳门大学图 书馆馆长吴建中，学术研究委员会副主任、国家图书馆副馆长孙一钢，学术研究委员会副主任、北京大 学信息管理系教授王子舟，医学图书馆分会主任、军事科学院军事科学信息研究中心副主任陈锐，《图 书情报工作》杂志社社长兼主编、中国科学院文献情报中心教授初景利，《大学图书馆学报》副主编王 波，中国人民大学信息资源管理学院教授索传军，北京大学信息管理系教授张久珍，《中国图书馆学报》 常务副主编吴澍时等来自中国图书馆学会各分支机构及各系统图书馆、高校图书馆学院系、图书馆学期 刊编辑部专家代表等 20 余人参加会议。会议由中国图书馆学会秘书长霍瑞娟主持。</span></p><p><span>陈樱对到会的各位专家及参与 2019 年中国图书馆学会学术论文和业务案例征集研议工作的各位评委 所做的贡献表示感谢，并介绍了 2019 年中国图书馆年会筹备的相关情况。2019 年中国图书馆年会拟于今 年 8 月下旬在内蒙古鄂尔多斯市东胜区举办，主要议程包括开幕活动和主题论坛等学术活动。</span></p><p><span>吴建中主持了研议环节，就征集活动推荐的优秀作品及争议作品逐一进行审核、研议。本次征集活 动以“新时代图书馆的转型发展:均衡 融合 智慧”为主题，共设学术论文分主题 31 个，业务案例分主 题 12 个。根据工作进度安排，其中的 21 个学术论文分主题和 3 个业务案例分主题已结束投稿，征集稿 件约一千篇，并于 4 月下旬组织启动了研议工作。经各专家组和研议会综合评定，本次征集活动最后推 荐一等、二等、三等作品近 400 篇。目前所有研议结果均已在“中国图书馆学会会员管理与服务平台” 同步显示。一等作品将安排结集出版。后续，其他分主题征集将根据发布时间陆续结束投稿，并由相关 分支机构完成研议工作。</span>
+<span> 来源:中国图书馆学会. 2019 年中国图书馆学会学术论文和业务案例征集研议会召开. 2019-05-16. </span><a href='http://www.lsc.org.cn/contents/1432/13561.html' target='_blank' class='url'>http://www.lsc.org.cn/contents/1432/13561.html</a></p><h2><a name="15-中国图书馆学会副理事长程焕文成功连任国际图联管理委员会委员" class="md-header-anchor"></a><span>1.5 中国图书馆学会副理事长程焕文成功连任国际图联管理委员会委员</span></h2><p><span>2019 年 5 月 17 日，国际图书馆协会和机构联合会(International Federation of Library Associations and Institutions, 英文简称 IFLA，中文简称国际图联)网站正式公布国际图联管理委员会(IFLA Governing Board)委员(2019-2021 年)选举结果，中国图书馆学会副理事长、中山大学文献与文化遗产管理部主 任、资讯管理学院教授程焕文以高票成功当选国际图联管理委员会委员(2019-2021 年)。这是程焕文继 2017 年首次当选国际图联管理委员会委员(2017-2019 年)之后再次成功当选。</span></p><p><span>国际图联成立于 1927 年，由中国图书馆学会的前身中华图书馆协会与美国、英国等 14 国的图书馆 协会共同发起成立，是世界各国图书馆学协会、图书馆、信息机构共同组成的国际机构，是世界图书馆 界最具权威、最有影响的非政府间专业性国际组织。管理委员会是国际图联的决策机构，由国际图联主 席、当选主席、10 名委员和各委员会主席等组成，负责国际图联的管理、财务和专业指导等工作。二十 多年来，中国图书馆界在国际图联管理委员会发挥了重要作用，先后有 5 人担任委员。 来源:中国图书馆学会.中国图书馆学会副理事长程焕文成功连任国际图联管理委员会委员. 2019-05-20. </span><a href='http://www.lsc.org.cn/contents/1238/13590.html' target='_blank' class='url'>http://www.lsc.org.cn/contents/1238/13590.html</a></p><h1><a name="2-专题报道" class="md-header-anchor"></a><span>2. 专题报道</span></h1><p><span>(编者按:伴着信息化及数字化的迅速发展，高校图书馆各类文献资源数量飞速提升。由于存在文献资 源短缺、采访模式简单、内容老化、资源利用率低等问题，使得图书馆文献资源的建设进展缓慢，数字 资源粗放式的管理模式已经无法与高校图书馆精细化的信息服务需求相匹配。为了提升用户对图书馆资 源保障服务的满意度，从文献采购评标要素、馆际互借与读者荐购关联机制、从数字化到数据化的文献 编目观念更新和数字资源保障评估研究等寻求各种途径来加以完善;探索外译图书评价指标体系等构建 基础多维度的文献保障评估体系，为高校图书馆信息服务质量的提升提供重要参考。)</span></p><h2><a name="21-文献资源采购评标要素差异性的实证研究" class="md-header-anchor"></a><span>2.1 文献资源采购评标要素差异性的实证研究</span></h2><p><span>高校图书馆评标要素的设置存在着诸多问题，如:(1)部分评标要素设计与最新的招投标管理办法 不符，如商务评分中不得将注册资金、营业额和财务状况作为评分依据等;(2)部分评标要素设置较为 随意。相当部分的高校图书馆未对评标要素进行科学分类，即使划分在技术评分和商务评分中的评标指 标也较为混淆;各评标指标分值差异悬殊，主观经验及个人偏好起决定性作用;部分样本指标细化程度 不足，影响评分的公正性。(3)评标要素设计要服务于高校图书馆资源建设的转型。</span></p><p><span>“双一流”建设强调的核心就是学科建设，目前评标要素的设计普遍缺乏对馆配商学科资源建设保 障力的考量。以全国 25 所高校图书馆的评标样本为研究对象，通过分析比较评标要素的总体构成及权重</span></p><p><span>差异，价格评分、技术评分和商务评分的差异性，旨在探寻一套能够对高校图书馆图书采购馆配商服务 质量进行有效评价的方法，以推动高校图书馆资源建设的转型，促进文献资源建设的可持续发展。</span></p><p><span>评标要素一级指标包括技术、商务和价格 3 部分。其中商务部分去除与新招投标管理办法不符的评 标指标，并重新梳理商务评分和技术评分分属的评标指标，综合为技术评标指标 4 项二级指标，16 项 三级指标，商务评标有 6 项二级指标，见图 2-1。</span></p><h2><a name="22-馆际互借与读者荐购的统一关联机制研究" class="md-header-anchor"></a><span>2.2 馆际互借与读者荐购的统一关联机制研究</span></h2><p><span>馆际互借与读者荐购作为图书馆弥补馆藏资源建设不足的两种途径，可以满足读者的文献需求，两 者殊途同归。在当前图书馆的实践中，两者往往相互独立，各自存在着优势和缺点。在对两者的实现方 式、存在问题以及时效性、获取成本等进行对比分析的基础上，提出了推进两者关联并统一融合的可行 性方案。指出需要通过培养读者通过多途径获取资源的信息能力，开发馆际互借与读者荐购的统一提交 系统，设计一套文献资源的采购选择标准，建立一套图书订购后的快速处理方法等一系列措施，构建具 有一定可操作性的统一关联机制，并设计了相应的流程图，以供同行参考借鉴，见图 2-2。</span></p><h2><a name="23-文献编目从数字化到数据化" class="md-header-anchor"></a><span>2.3 文献编目</span><strong><span>:</span></strong><span>从数字化到数据化</span></h2><p><span>近十年来，文献编目领域从理论模型、标准规范到实践应用，均发生了自机读目录问世以来的最大 变化。这个变化与关联数据技术的应用直接相关，可以概括为从数字化到数据化，也就是书目数据由机 器可读走向机器可操作，进而融入互联网全球数据库。在此过程中，编目界经历了观念上的重要变更(从 记录到数据)，厘清了混淆的概念(实体及其名称与描述)，重新对书目数据建模，并展开了一系列实践。 其中，作为应用的重要组成部分，数据基础设施在数据化中发挥着重要作用。</span></p><p><span>关联数据应用强调数据复用，因此并不需要完全重做一套，尤其是 RDF 词表，可以通过应用配置文 件复用已有词表;取值词表中也有很多代码值不受语言影响，宜直接采用现有词表，如广受青睐的 RDF 参考取值词表。但主题词、分类号，词间差异大、体系不同，更适合自己建立。名称和题名规范档如不 能加入国际合作，也宜通过调和与解析，建立与 VIAF、国际标准名称标识符(ISNI)和 Wiki-data 等通 用资源之间的关联。建立自己的关联数据基础设施，是我国加入编目数据化潮流的必经之路。 来源:胡小菁.文献编目:从数字化到数据化[J].中国图书馆学报,2019,(03):1-13.</span></p><h2><a name="24-基于元数据管理的数字资源保障评估研究" class="md-header-anchor"></a><span>2.4 基于元数据管理的数字资源保障评估研究</span></h2><p><span>全新形式的细粒化数字资源管理为高校图书馆多维度文献保障评估提供基础，高校图书馆只有具备 系统化、规范化的数字资源管理与评估体系，才可以顺应数字信息化的时代发展趋势，真正利用大数据 分析助力高校教学和科研的发展建设。图书馆要多角度、全方位地了解采购需求，系统全面地保障、评 估数字资源的使用力度，满足学校重点优势学科建设、教学和科研所需文献信息资源等。全新的评估标 准应该重点以衡量是否满足重点优势学科文献资源、学者发文资源、衍生文献资源、对标机构文献、研 究热点等一系列需求，具体如表 2-1 所示:</span></p><p><span>数字图书馆资源建设中要求科学制订资源建设规划，并重点关注资源建设原则、建设方式、建设工 作内容、建设策略、建设经费、建设管理等 6 个方面，其中建设策略要求图书馆应当努力扩大资源量， 提高资源保障水平和供给能力。高校图书馆在有限的经费预算面前，对于逐年暴增的数字资源，必须严 格评估、综合考量、优中选优，同时还应充分考虑高校学科发展规划、读者使用评价，做到及时的淘汰 更新。具体流程见图 2-3:</span></p><h2><a name="25-人文社会科学外译图书评价指标体系研究" class="md-header-anchor"></a><span>2.5 人文社会科学外译图书评价指标体系研究</span></h2><p><span>已有的图书评价研究更多地关注图书的学术价值，对于图书的社会影响反映不足:书评虽然被公认 为是进行图书评价的最好方式，但书评机制不健全，评价者主观意愿强，覆盖图书范围有限，同时在专业书评缺乏曝光度时，普通读者书评难以反映图书价值;图书使用效益的评价受到图书馆藏规模、馆藏 图书类别和读者群特征的影响，适用于单个图书馆馆藏图书的评价;图书引用反映了图书的学术影响， 但由于引用延迟导致评价滞后;在利用 Altmetrics 指标动态及时反映图书社会影响时应当注意 Altmetrics 指标的覆盖率、数据的稳定性和指标间的相关性问题。</span></p><p><span>外译图书评价指标体系应坚持定性评价和定量评价相结合，既要注重利用领域专家的专业知识对图 书内容质量和学术价值进行评判，也要用客观数据刻画图书影响力。综合考虑反映外译图书学术影响和 社会影响各个方面的因素，文章构建了一个多维度的人文社会科学外译图书评价指标体系，框架见图 2-4。</span></p><p><span>文章从反映外译图书学术影响力和社会影响力的 10 个维度出发，细化评价指标，建立多评价主体、 多层次、多特征的综合图书评价指标体系。不仅考察入选图书的学术价值，还关注图书外译后在世界范 围内的影响力水平，及时反馈外译图书在国外学者和民众间的反响，为后续外译图书的内容类型选择提 供指导。</span></p><p><span>来源:王伟,杨建林.人文社会科学外译图书评价指标体系研究[J].图书情报工作,2019:1-8.</span></p><h1><a name="3-探索与研究" class="md-header-anchor"></a><span>3. 探索与研究</span></h1><h2><a name="31-阅读推广的研究方法述评" class="md-header-anchor"></a><span>3.1 阅读推广的研究方法述评</span></h2><p><span>在倡导&quot;全民阅读&quot;的大背景下，阅读推广研究成为图书馆学情报学最活跃的研究领域之一。研究方法 对于提升阅读推广研究质量具有重要意义。选取思辨研究法、理论移植法、案例研究法、调查研究法、 实验法、文献分析法、比较分析法等一般研究方法，分析其在阅读推广研究领域的应用现状、适用领域、 研究贡献和存在的局限性。对研究方法的完善与规范使用提出三点建议:</span></p><p><span>一、打通不同研究方法的区隔，从方法一元走向方法多元。既要对“应然”问题作出回应，构建理 论框架，又要对“突然”现状进行揭示，勾勒实践蓝图。任何方法都有自己的长处和局限，要注意打通 不同研究方法都有自己的长处和局限，要注意打通不同研究方法间的区隔，根据研究性质、研究目标选 取研究方法，关注研究方法与研究课题的相符性和适应性、方法间的互补和契合。</span></p><p><span>二、消除不同研究范式间的鸿沟，构建科学研究的良性循环。理论成果主要由思辨研究、规范研究</span>
+<span>产生，多源于学术大家的逻辑思维和个人经验，实证研究大部分停留在描述事实或状态的层面，归纳和抽象一般性经验上升为理论的情况较为鲜见。大部分的思辨研究、规范研究没有吸纳和内化已有的实证</span></p><p><span>研究成果，过多关注关于价值、意义的探讨，导致其试图夯筑的理论体系如同空中楼阁，与丰富生动的 实践活动脱节，没有解释力和预测力，反过来也无法指导实证研究的规范化开展。通过实证研究把脉现 状，勘测误区，探寻规律，为理论研究提供坚实的数据和实例支撑，不断丰富阅读推广基础理论和应用 理论体系，应是实证研究的应有之意。思辨研究、规范研究成果应切实发挥前瞻和先导作用，为规范开 展实证研究提供理论指导。不同研究范式之间互相补充，互相支撑，才能构建科学研究的良性循坏。</span></p><p><span>三、提升研究方法的规范性，提升学术成果的实用价值。任何一个学科的发展都里不开相对统一的 学术规范共识，其中亦包括研究方法的使用规范。实证研究中常用的问卷调查法，普遍存在未进行严格 概率抽样、样本的代表性不足等问题，少数大样本研究虽运用了概率抽样方法，但在数据质量控制、论 文格式标准等方面存在众多问题。其他常用研究方法如案例分析法、比较分析法等在过程设计、程序步 骤、数据来源等方面也存在严重失范。强调实证，本质上是要谋求图书馆学研究的科学化和规范化，若 只取其形式而失其精髓，研究成果的可靠性和可信度将大打折扣。 来源:李丽娜,范并思.阅读推广的研究方法述评[J].大学图书馆学报,2019,37(01):48-54+86.</span></p></div>
+</body>
+</html>
